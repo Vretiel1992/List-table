@@ -9,6 +9,8 @@ import UIKit
 
 class AverageStackView: UIStackView {
 
+    // MARK: - Private Properties
+
     private lazy var stackViewForImages: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -29,10 +31,10 @@ class AverageStackView: UIStackView {
 
     private lazy var nameView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = Constants.Colors.backgroundSecondary
         view.layer.cornerRadius = 21
         view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderColor = UIColor.label.cgColor
         view.clipsToBounds = true
         view.layer.maskedCorners = [
             .layerMinXMaxYCorner,
@@ -44,10 +46,10 @@ class AverageStackView: UIStackView {
 
     private lazy var phoneView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = Constants.Colors.backgroundSecondary
         view.layer.cornerRadius = 21
         view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderColor = UIColor.label.cgColor
         view.clipsToBounds = true
         view.layer.maskedCorners = [
             .layerMinXMaxYCorner,
@@ -58,10 +60,10 @@ class AverageStackView: UIStackView {
 
     private lazy var skillsView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = Constants.Colors.backgroundSecondary
         view.layer.cornerRadius = 21
         view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderColor = UIColor.label.cgColor
         view.clipsToBounds = true
         view.layer.maskedCorners = [
             .layerMinXMaxYCorner,
@@ -73,9 +75,9 @@ class AverageStackView: UIStackView {
 
     private lazy var nameImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person.circle")
+        imageView.image = Constants.Images.personCircle
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .systemBackground
+        imageView.backgroundColor = Constants.Colors.backgroundSecondary
         imageView.tintColor = .label
         imageView.layer.cornerRadius = 21
         imageView.clipsToBounds = true
@@ -84,9 +86,9 @@ class AverageStackView: UIStackView {
 
     private lazy var phoneImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "phone.circle")
+        imageView.image = Constants.Images.phoneCircle
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .systemBackground
+        imageView.backgroundColor = Constants.Colors.backgroundSecondary
         imageView.tintColor = .label
         imageView.layer.cornerRadius = 21
         imageView.clipsToBounds = true
@@ -95,14 +97,16 @@ class AverageStackView: UIStackView {
 
     private lazy var skillsImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "gear.circle")
+        imageView.image = Constants.Images.gearCircle
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .systemBackground
+        imageView.backgroundColor = Constants.Colors.backgroundSecondary
         imageView.tintColor = .label
         imageView.layer.cornerRadius = 21
         imageView.clipsToBounds = true
         return imageView
     }()
+
+    // MARK: - Initializers
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -113,6 +117,17 @@ class AverageStackView: UIStackView {
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: - Override Methods
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+      super.traitCollectionDidChange(previousTraitCollection)
+        nameView.layer.borderColor = UIColor.label.cgColor
+        phoneView.layer.borderColor = UIColor.label.cgColor
+        skillsView.layer.borderColor = UIColor.label.cgColor
+    }
+
+    // MARK: - Private Methods
 
     private func setupViews() {
         alignment = .fill

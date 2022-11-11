@@ -13,13 +13,15 @@ import Foundation
 
 protocol AnyInteractor {
     var presenter: AnyPresenter? { get set }
-    
+
     func getUsers()
 }
 
+// MARK: - AnyInteractor
+
 class EmployeeInteractor: AnyInteractor {
     var presenter: AnyPresenter?
-    
+
     func getUsers() {
         print("start fetching")
         guard let url = URL(string: "https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c") else { return }
@@ -30,7 +32,7 @@ class EmployeeInteractor: AnyInteractor {
                 }
                 
                 do {
-                    let entities = try JSONDecoder().decode(JSONContainer.self, from: data)
+                    let entities = try JSONDecoder().decode(ViewModel.self, from: data)
                     self?.presenter?.interactorDidFetchCompany(with: .success(entities))
                 }
                 catch {

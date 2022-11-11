@@ -9,6 +9,8 @@ import UIKit
 
 class LowerStackView: UIStackView {
 
+    // MARK: - Private Properties
+
     private lazy var nameView: UIView = {
         let view = UIView()
         view.backgroundColor = Constants.Colors.backgroundNameBackView
@@ -45,6 +47,8 @@ class LowerStackView: UIStackView {
         return view
     }()
 
+    // MARK: - Initializers
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -53,6 +57,8 @@ class LowerStackView: UIStackView {
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: - Private Methods
 
     private func setupViews() {
         alignment = .fill
