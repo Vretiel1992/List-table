@@ -9,14 +9,17 @@ import UIKit
 
 class CustomView: UIView {
 
+    // MARK: - Public Properties
+
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(UITableViewCell.self,
-                           forCellReuseIdentifier: "defaultCell")
+                           forCellReuseIdentifier: Constants.Text.defaultCell)
         tableView.register(CustomTableViewCell.self,
-                           forCellReuseIdentifier: "customCell")
-        tableView.backgroundColor = .systemGray3
+                           forCellReuseIdentifier: Constants.Text.customCell)
+        tableView.backgroundColor = Constants.Colors.backgroundPrimary
         tableView.isHidden = true
+        tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -29,6 +32,8 @@ class CustomView: UIView {
         return label
     }()
 
+    // MARK: - Initializers
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -39,8 +44,10 @@ class CustomView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Private Methods
+
     private func setupViews() {
-        backgroundColor = .systemGray
+        backgroundColor = Constants.Colors.backgroundApp
         addSubview(tableView)
         addSubview(textLabel)
     }

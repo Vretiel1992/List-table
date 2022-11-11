@@ -14,20 +14,27 @@ import UIKit
 protocol AnyView {
     var presenter: AnyPresenter? { get set }
     
-    func update(with parse: JSONContainer)
+    func update(with viewModel: ViewModel)
     func update(with error: String)
 }
 
 class EmployeeViewController: UIViewController {
 
+    // MARK: - Public Properties
+
     var presenter: AnyPresenter?
+
+    // MARK: - Private Properties
+
     private var employees: [Employee] = []
-    private let customView = CustomView()
-    
+    private lazy var customView = CustomView()
+
+    // MARK: - Lifecycle
+
     override func loadView() {
         view = customView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         customView.tableView.dataSource = self
@@ -35,17 +42,20 @@ class EmployeeViewController: UIViewController {
     }
 }
 
+// MARK: - AnyView
+
 extension EmployeeViewController: AnyView {
-    
-    func update(with parse: JSONContainer) {
+
+    func update(with viewModel: ViewModel) {
         print("got employees")
         DispatchQueue.main.async {
-            self.employees = parse.company.employees
+            let sortedEmployeesByName = viewModel.company.employees.sorted(by: < )
+            self.employees = sortedEmployeesByName
             self.customView.tableView.reloadData()
             self.customView.tableView.isHidden = false
         }
     }
-    
+
     func update(with error: String) {
         print(error)
         DispatchQueue.main.async {
@@ -57,18 +67,20 @@ extension EmployeeViewController: AnyView {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension EmployeeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         employees.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "customCell",
+            withIdentifier: Constants.Text.customCell,
             for: indexPath
         ) as? CustomTableViewCell else {
             let cell = tableView.dequeueReusableCell(
-                withIdentifier: "defaultCell",
+                withIdentifier: Constants.Text.defaultCell,
                 for: indexPath
             )
             return cell
@@ -79,8 +91,10 @@ extension EmployeeViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension EmployeeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+        206
     }
 }
