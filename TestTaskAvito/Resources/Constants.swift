@@ -36,6 +36,9 @@ enum Constants {
             }
         }
 
+        static var backgroundLogoBackView: UIColor? { .systemYellow }
+        static var borderLogoBackView: CGColor? { #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1).cgColor }
+        
         static var backgroundMainBackView: UIColor? { .systemIndigo }
         static var backgroundNameBackView: UIColor? { .systemGreen }
         static var backgroundPhoneBackView: UIColor? { .systemPink }
@@ -48,8 +51,8 @@ enum Constants {
     }
 
     enum Fonts {
-        static var aeroport28Bold: UIFont? {
-            UIFont(name: "Aeroport-Bold", size: 28)
+        static var aeroport60Bold: UIFont? {
+            UIFont(name: "Aeroport-Bold", size: 60)
         }
 
         static var futura22Bold: UIFont? {
@@ -66,6 +69,7 @@ enum Constants {
     }
 
     enum Text {
+        static let customHeader = "customHeader"
         static let customCell = "customCell"
         static let defaultCell = "defaultCell"
     }

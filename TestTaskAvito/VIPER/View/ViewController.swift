@@ -25,8 +25,8 @@ class EmployeeViewController: UIViewController {
     var presenter: AnyPresenter?
 
     // MARK: - Private Properties
-
-    private var employees: [Employee] = []
+    private var company: Company?
+//    private var employees: [Employee] = []
     private lazy var customView = CustomView()
 
     // MARK: - Lifecycle
@@ -47,10 +47,10 @@ class EmployeeViewController: UIViewController {
 extension EmployeeViewController: AnyView {
 
     func update(with viewModel: ViewModel) {
-        print("got employees")
+        print("got company")
         DispatchQueue.main.async {
-            let sortedEmployeesByName = viewModel.company.employees.sorted(by: < )
-            self.employees = sortedEmployeesByName
+            self.company = viewModel.company
+            self.company?.employees.sort(by: < )
             self.customView.tableView.reloadData()
             self.customView.tableView.isHidden = false
         }
@@ -59,7 +59,7 @@ extension EmployeeViewController: AnyView {
     func update(with error: String) {
         print(error)
         DispatchQueue.main.async {
-            self.employees = []
+            self.company = nil
             self.customView.textLabel.text = error
             self.customView.tableView.isHidden = true
             self.customView.textLabel.isHidden = false
@@ -71,7 +71,7 @@ extension EmployeeViewController: AnyView {
 
 extension EmployeeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        employees.count
+        company?.employees.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,8 +85,10 @@ extension EmployeeViewController: UITableViewDataSource {
             )
             return cell
         }
-        let employees = employees[indexPath.row]
-        cell.configure(with: employees)
+        
+        if let employees = company?.employees {
+            cell.configure(with: employees[indexPath.row])
+        }
         return cell
     }
 }
@@ -96,5 +98,21 @@ extension EmployeeViewController: UITableViewDataSource {
 extension EmployeeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         206
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let view = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: Constants.Text.customHeader
+        ) as? CustomTableViewHeader else {
+            return nil
+        }
+        if let company = company {
+            view.configure(with: company)
+        }
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        company != nil ? 100 : 0
     }
 }

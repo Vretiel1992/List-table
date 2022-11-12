@@ -17,6 +17,8 @@ class CustomView: UIView {
                            forCellReuseIdentifier: Constants.Text.defaultCell)
         tableView.register(CustomTableViewCell.self,
                            forCellReuseIdentifier: Constants.Text.customCell)
+        tableView.register(CustomTableViewHeader.self,
+                           forHeaderFooterViewReuseIdentifier: Constants.Text.customHeader)
         tableView.backgroundColor = Constants.Colors.backgroundPrimary
         tableView.isHidden = true
         tableView.allowsSelection = false

@@ -19,7 +19,7 @@ struct ViewModel: Codable {
 
 struct Company: Codable {
     let name: String
-    let employees: [Employee]
+    var employees: [Employee]
 }
 
 // MARK: - Employee
