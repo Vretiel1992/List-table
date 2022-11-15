@@ -1,5 +1,5 @@
 //
-//  Entity.swift
+//  GetCompanyModel.swift
 //  TestTaskAvito
 //
 //  Created by Антон Денисюк on 08.11.2022.
@@ -7,11 +7,9 @@
 
 import Foundation
 
-// Model
-
 // MARK: - ViewModel
 
-struct ViewModel: Codable {
+struct CompanyModel: Codable {
     let company: Company
 }
 
@@ -19,7 +17,7 @@ struct ViewModel: Codable {
 
 struct Company: Codable {
     let name: String
-    let employees: [Employee]
+    var employees: [Employee]
 }
 
 // MARK: - Employee

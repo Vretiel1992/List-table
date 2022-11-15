@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class EmployeesTableViewCell: UITableViewCell {
 
     // MARK: - Private Properties
 
@@ -30,8 +30,46 @@ class CustomTableViewCell: UITableViewCell {
     }()
 
     private lazy var lowerStackView = LowerStackView()
+
     private lazy var averageStackView = AverageStackView()
-    private lazy var upperStackView = UpperStackView()
+
+    private lazy var upperStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.spacing = 22
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
+    private lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = Constants.Fonts.futura22Bold
+        label.textAlignment = .center
+        return label
+    }()
+
+    private lazy var phoneNumberLabel: UILabel = {
+        let label = UILabel()
+        label.font = Constants.Fonts.americanTypewriter20Bold
+        label.textAlignment = .center
+        return label
+    }()
+
+    private lazy var skillsLabel: UILabel = {
+        let label = UILabel()
+        label.font = Constants.Fonts.markerFelt20Wide
+        label.textAlignment = .center
+        label.minimumScaleFactor = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.lineBreakMode = .byTruncatingTail
+        if #available(iOS 14.0, *) {
+            label.lineBreakStrategy = .hangulWordPriority
+        }
+        label.numberOfLines = 2
+        return label
+    }()
 
     // MARK: - Initializers
 
@@ -48,17 +86,17 @@ class CustomTableViewCell: UITableViewCell {
     // MARK: - Override Methods
 
     override func prepareForReuse() {
-        upperStackView.nameLabel.text = nil
-        upperStackView.phoneNumberLabel.text = nil
-        upperStackView.skillsLabel.text = nil
+        nameLabel.text = nil
+        phoneNumberLabel.text = nil
+        skillsLabel.text = nil
     }
 
     // MARK: - Public Methods
 
     func configure(with employee: Employee) {
-        upperStackView.nameLabel.text = employee.name
-        upperStackView.phoneNumberLabel.text = employee.phoneNumber
-        upperStackView.skillsLabel.text = employee.skills.joined(separator: ", ")
+        nameLabel.text = employee.name
+        phoneNumberLabel.text = employee.phoneNumber
+        skillsLabel.text = employee.skills.joined(separator: ", ")
     }
     
     // MARK: - Private Methods
@@ -71,6 +109,9 @@ class CustomTableViewCell: UITableViewCell {
         backView.addSubview(lowerStackView)
         lowerStackView.addSubview(averageStackView)
         averageStackView.addSubview(upperStackView)
+        upperStackView.addArrangedSubview(nameLabel)
+        upperStackView.addArrangedSubview(phoneNumberLabel)
+        upperStackView.addArrangedSubview(skillsLabel)
     }
 
     private func setupConstraints() {
