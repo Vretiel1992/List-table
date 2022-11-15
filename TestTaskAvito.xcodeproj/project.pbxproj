@@ -11,14 +11,19 @@
 		E40CDD34291AACA600E11907 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD33291AACA600E11907 /* SceneDelegate.swift */; };
 		E40CDD3B291AACA900E11907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40CDD3A291AACA900E11907 /* Assets.xcassets */; };
 		E40CDD3E291AACA900E11907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40CDD3C291AACA900E11907 /* LaunchScreen.storyboard */; };
-		E40CDD49291AB62700E11907 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD48291AB62600E11907 /* Interactor.swift */; };
-		E40CDD4B291AB62F00E11907 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4A291AB62F00E11907 /* Presenter.swift */; };
-		E40CDD4D291AB63900E11907 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4C291AB63900E11907 /* Entity.swift */; };
-		E40CDD4F291AB64000E11907 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4E291AB64000E11907 /* Router.swift */; };
+		E40CDD49291AB62700E11907 /* EmployeesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD48291AB62600E11907 /* EmployeesInteractor.swift */; };
+		E40CDD4B291AB62F00E11907 /* EmployeesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4A291AB62F00E11907 /* EmployeesPresenter.swift */; };
+		E40CDD4D291AB63900E11907 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4C291AB63900E11907 /* CompanyModel.swift */; };
+		E40CDD4F291AB64000E11907 /* EmployeesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4E291AB64000E11907 /* EmployeesRouter.swift */; };
 		E44EF242291D109200921E61 /* Aeroport-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E44EF241291D109200921E61 /* Aeroport-Bold.ttf */; };
-		E4B1BC70291AE90D00968401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC6F291AE90D00968401 /* ViewController.swift */; };
-		E4B1BC72291AEC7100968401 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC71291AEC7100968401 /* CustomView.swift */; };
-		E4B1BC74291C3CD000968401 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC73291C3CD000968401 /* CustomTableViewCell.swift */; };
+		E46BDED3291DA52B002BC93D /* LowerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDED2291DA52B002BC93D /* LowerStackView.swift */; };
+		E46BDED5291DA896002BC93D /* AverageStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDED4291DA896002BC93D /* AverageStackView.swift */; };
+		E46BDED9291E68E4002BC93D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDED8291E68E4002BC93D /* Constants.swift */; };
+		E46BDEDC291EF507002BC93D /* EmployeesTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDEDB291EF507002BC93D /* EmployeesTableViewHeader.swift */; };
+		E46BDEE0291FAA9A002BC93D /* Error+noInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDEDF291FAA9A002BC93D /* Error+noInternetConnection.swift */; };
+		E46BDEE72923CFD2002BC93D /* EmployeesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDEE62923CFD2002BC93D /* EmployeesAssembly.swift */; };
+		E4B1BC70291AE90D00968401 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC6F291AE90D00968401 /* EmployeesViewController.swift */; };
+		E4B1BC74291C3CD000968401 /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC73291C3CD000968401 /* EmployeesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,14 +33,19 @@
 		E40CDD3A291AACA900E11907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E40CDD3D291AACA900E11907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40CDD3F291AACA900E11907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E40CDD48291AB62600E11907 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		E40CDD4A291AB62F00E11907 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		E40CDD4C291AB63900E11907 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		E40CDD4E291AB64000E11907 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E40CDD48291AB62600E11907 /* EmployeesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesInteractor.swift; sourceTree = "<group>"; };
+		E40CDD4A291AB62F00E11907 /* EmployeesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesPresenter.swift; sourceTree = "<group>"; };
+		E40CDD4C291AB63900E11907 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		E40CDD4E291AB64000E11907 /* EmployeesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesRouter.swift; sourceTree = "<group>"; };
 		E44EF241291D109200921E61 /* Aeroport-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aeroport-Bold.ttf"; sourceTree = "<group>"; };
-		E4B1BC6F291AE90D00968401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4B1BC71291AEC7100968401 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		E4B1BC73291C3CD000968401 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E46BDED2291DA52B002BC93D /* LowerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerStackView.swift; sourceTree = "<group>"; };
+		E46BDED4291DA896002BC93D /* AverageStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageStackView.swift; sourceTree = "<group>"; };
+		E46BDED8291E68E4002BC93D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E46BDEDB291EF507002BC93D /* EmployeesTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewHeader.swift; sourceTree = "<group>"; };
+		E46BDEDF291FAA9A002BC93D /* Error+noInternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+noInternetConnection.swift"; sourceTree = "<group>"; };
+		E46BDEE62923CFD2002BC93D /* EmployeesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesAssembly.swift; sourceTree = "<group>"; };
+		E4B1BC6F291AE90D00968401 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		E4B1BC73291C3CD000968401 /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,22 +79,25 @@
 			isa = PBXGroup;
 			children = (
 				E4A1297B291CED19002835ED /* Application */,
-				E40CDD45291AB33300E11907 /* VIPER */,
-				E4A1297C291CED31002835ED /* Resources */,
+				E40CDD45291AB33300E11907 /* Employees */,
+				E46BDEE52923CB2E002BC93D /* Model */,
+				E40CDD4C291AB63900E11907 /* CompanyModel.swift */,
+				E46BDEDE291FAA6C002BC93D /* Utils */,
 			);
 			path = TestTaskAvito;
 			sourceTree = "<group>";
 		};
-		E40CDD45291AB33300E11907 /* VIPER */ = {
+		E40CDD45291AB33300E11907 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
-				E4A1297A291CED0C002835ED /* View */,
-				E4A12976291CECE2002835ED /* Interactor */,
-				E4A12977291CECF0002835ED /* Presenter */,
-				E4A12978291CECF7002835ED /* Entity */,
-				E4A12979291CED00002835ED /* Router */,
+				E46BDEE22923C4A1002BC93D /* ComponentsView */,
+				E4B1BC6F291AE90D00968401 /* EmployeesViewController.swift */,
+				E40CDD48291AB62600E11907 /* EmployeesInteractor.swift */,
+				E40CDD4A291AB62F00E11907 /* EmployeesPresenter.swift */,
+				E40CDD4E291AB64000E11907 /* EmployeesRouter.swift */,
+				E46BDEE62923CFD2002BC93D /* EmployeesAssembly.swift */,
 			);
-			path = VIPER;
+			path = Employees;
 			sourceTree = "<group>";
 		};
 		E44EF240291D107F00921E61 /* Fonts */ = {
@@ -95,46 +108,38 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		E4A12976291CECE2002835ED /* Interactor */ = {
+		E46BDEDA291EB081002BC93D /* EmployeeCell */ = {
 			isa = PBXGroup;
 			children = (
-				E40CDD48291AB62600E11907 /* Interactor.swift */,
+				E4B1BC73291C3CD000968401 /* EmployeesTableViewCell.swift */,
+				E46BDED4291DA896002BC93D /* AverageStackView.swift */,
+				E46BDED2291DA52B002BC93D /* LowerStackView.swift */,
 			);
-			path = Interactor;
+			path = EmployeeCell;
 			sourceTree = "<group>";
 		};
-		E4A12977291CECF0002835ED /* Presenter */ = {
+		E46BDEDE291FAA6C002BC93D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E40CDD4A291AB62F00E11907 /* Presenter.swift */,
+				E46BDEDF291FAA9A002BC93D /* Error+noInternetConnection.swift */,
 			);
-			path = Presenter;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		E4A12978291CECF7002835ED /* Entity */ = {
+		E46BDEE22923C4A1002BC93D /* ComponentsView */ = {
 			isa = PBXGroup;
 			children = (
-				E40CDD4C291AB63900E11907 /* Entity.swift */,
+				E46BDEDA291EB081002BC93D /* EmployeeCell */,
+				E46BDEDB291EF507002BC93D /* EmployeesTableViewHeader.swift */,
 			);
-			path = Entity;
+			path = ComponentsView;
 			sourceTree = "<group>";
 		};
-		E4A12979291CED00002835ED /* Router */ = {
+		E46BDEE52923CB2E002BC93D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E40CDD4E291AB64000E11907 /* Router.swift */,
 			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		E4A1297A291CED0C002835ED /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E4B1BC73291C3CD000968401 /* CustomTableViewCell.swift */,
-				E4B1BC71291AEC7100968401 /* CustomView.swift */,
-				E4B1BC6F291AE90D00968401 /* ViewController.swift */,
-			);
-			path = View;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E4A1297B291CED19002835ED /* Application */ = {
@@ -142,6 +147,10 @@
 			children = (
 				E40CDD31291AACA600E11907 /* AppDelegate.swift */,
 				E40CDD33291AACA600E11907 /* SceneDelegate.swift */,
+				E46BDED8291E68E4002BC93D /* Constants.swift */,
+				E40CDD3F291AACA900E11907 /* Info.plist */,
+				E40CDD3C291AACA900E11907 /* LaunchScreen.storyboard */,
+				E4A1297C291CED31002835ED /* Resources */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -151,8 +160,6 @@
 			children = (
 				E44EF240291D107F00921E61 /* Fonts */,
 				E40CDD3A291AACA900E11907 /* Assets.xcassets */,
-				E40CDD3C291AACA900E11907 /* LaunchScreen.storyboard */,
-				E40CDD3F291AACA900E11907 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -228,15 +235,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E40CDD4F291AB64000E11907 /* Router.swift in Sources */,
-				E40CDD4B291AB62F00E11907 /* Presenter.swift in Sources */,
-				E40CDD4D291AB63900E11907 /* Entity.swift in Sources */,
-				E40CDD49291AB62700E11907 /* Interactor.swift in Sources */,
-				E4B1BC72291AEC7100968401 /* CustomView.swift in Sources */,
-				E4B1BC74291C3CD000968401 /* CustomTableViewCell.swift in Sources */,
+				E40CDD4F291AB64000E11907 /* EmployeesRouter.swift in Sources */,
+				E40CDD4B291AB62F00E11907 /* EmployeesPresenter.swift in Sources */,
+				E40CDD4D291AB63900E11907 /* CompanyModel.swift in Sources */,
+				E40CDD49291AB62700E11907 /* EmployeesInteractor.swift in Sources */,
+				E46BDEE0291FAA9A002BC93D /* Error+noInternetConnection.swift in Sources */,
+				E4B1BC74291C3CD000968401 /* EmployeesTableViewCell.swift in Sources */,
+				E46BDED9291E68E4002BC93D /* Constants.swift in Sources */,
+				E46BDED3291DA52B002BC93D /* LowerStackView.swift in Sources */,
 				E40CDD32291AACA600E11907 /* AppDelegate.swift in Sources */,
-				E4B1BC70291AE90D00968401 /* ViewController.swift in Sources */,
+				E46BDEE72923CFD2002BC93D /* EmployeesAssembly.swift in Sources */,
+				E4B1BC70291AE90D00968401 /* EmployeesViewController.swift in Sources */,
+				E46BDED5291DA896002BC93D /* AverageStackView.swift in Sources */,
 				E40CDD34291AACA600E11907 /* SceneDelegate.swift in Sources */,
+				E46BDEDC291EF507002BC93D /* EmployeesTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MV29L5KM63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestTaskAvito/Resources/Info.plist;
+				INFOPLIST_FILE = TestTaskAvito/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -404,7 +416,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MV29L5KM63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestTaskAvito/Resources/Info.plist;
+				INFOPLIST_FILE = TestTaskAvito/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

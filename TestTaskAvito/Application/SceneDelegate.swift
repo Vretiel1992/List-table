@@ -13,14 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
-        
-        let userRouter = EmployeeRouter.start()
-        let initialVC = userRouter.entry
-        
         let window = UIWindow(windowScene: windowsScene)
+        let initialVC = EmployeesAssembly.create()
         window.rootViewController = initialVC
         self.window = window
         window.makeKeyAndVisible()
     }
 }
-
