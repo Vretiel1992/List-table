@@ -1,5 +1,5 @@
 //
-//  CustomTableViewHeader.swift
+//  EmployeesTableViewHeader.swift
 //  TestTaskAvito
 //
 //  Created by Антон Денисюк on 12.11.2022.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class CustomTableViewHeader: UITableViewHeaderFooterView {
+class EmployeesTableViewHeader: UITableViewHeaderFooterView {
 
     // MARK: - Private Properties
 
     private lazy var backView: UIView = {
         let view = UIView()
         view.backgroundColor = Constants.Colors.backgroundLogoBackView
-        view.layer.borderWidth = 2
+        view.layer.borderWidth = 3
         view.layer.borderColor = Constants.Colors.borderLogoBackView
         view.layer.cornerRadius = 21
         view.layer.maskedCorners = [
