@@ -13,7 +13,6 @@
 		E40CDD3E291AACA900E11907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40CDD3C291AACA900E11907 /* LaunchScreen.storyboard */; };
 		E40CDD49291AB62700E11907 /* EmployeesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD48291AB62600E11907 /* EmployeesInteractor.swift */; };
 		E40CDD4B291AB62F00E11907 /* EmployeesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4A291AB62F00E11907 /* EmployeesPresenter.swift */; };
-		E40CDD4D291AB63900E11907 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4C291AB63900E11907 /* CompanyModel.swift */; };
 		E40CDD4F291AB64000E11907 /* EmployeesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40CDD4E291AB64000E11907 /* EmployeesRouter.swift */; };
 		E44EF242291D109200921E61 /* Aeroport-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E44EF241291D109200921E61 /* Aeroport-Bold.ttf */; };
 		E46BDED3291DA52B002BC93D /* LowerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDED2291DA52B002BC93D /* LowerStackView.swift */; };
@@ -24,6 +23,7 @@
 		E46BDEE72923CFD2002BC93D /* EmployeesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46BDEE62923CFD2002BC93D /* EmployeesAssembly.swift */; };
 		E4B1BC70291AE90D00968401 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC6F291AE90D00968401 /* EmployeesViewController.swift */; };
 		E4B1BC74291C3CD000968401 /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1BC73291C3CD000968401 /* EmployeesTableViewCell.swift */; };
+		E4C56614292456F900AA3383 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C56613292456F900AA3383 /* CompanyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,6 @@
 		E40CDD3F291AACA900E11907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40CDD48291AB62600E11907 /* EmployeesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesInteractor.swift; sourceTree = "<group>"; };
 		E40CDD4A291AB62F00E11907 /* EmployeesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesPresenter.swift; sourceTree = "<group>"; };
-		E40CDD4C291AB63900E11907 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		E40CDD4E291AB64000E11907 /* EmployeesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesRouter.swift; sourceTree = "<group>"; };
 		E44EF241291D109200921E61 /* Aeroport-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aeroport-Bold.ttf"; sourceTree = "<group>"; };
 		E46BDED2291DA52B002BC93D /* LowerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerStackView.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		E46BDEE62923CFD2002BC93D /* EmployeesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesAssembly.swift; sourceTree = "<group>"; };
 		E4B1BC6F291AE90D00968401 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		E4B1BC73291C3CD000968401 /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
+		E4C56613292456F900AA3383 /* CompanyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,6 @@
 				E4A1297B291CED19002835ED /* Application */,
 				E40CDD45291AB33300E11907 /* Employees */,
 				E46BDEE52923CB2E002BC93D /* Model */,
-				E40CDD4C291AB63900E11907 /* CompanyModel.swift */,
 				E46BDEDE291FAA6C002BC93D /* Utils */,
 			);
 			path = TestTaskAvito;
@@ -138,6 +137,7 @@
 		E46BDEE52923CB2E002BC93D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4C56613292456F900AA3383 /* CompanyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,7 +237,6 @@
 			files = (
 				E40CDD4F291AB64000E11907 /* EmployeesRouter.swift in Sources */,
 				E40CDD4B291AB62F00E11907 /* EmployeesPresenter.swift in Sources */,
-				E40CDD4D291AB63900E11907 /* CompanyModel.swift in Sources */,
 				E40CDD49291AB62700E11907 /* EmployeesInteractor.swift in Sources */,
 				E46BDEE0291FAA9A002BC93D /* Error+noInternetConnection.swift in Sources */,
 				E4B1BC74291C3CD000968401 /* EmployeesTableViewCell.swift in Sources */,
@@ -249,6 +248,7 @@
 				E46BDED5291DA896002BC93D /* AverageStackView.swift in Sources */,
 				E40CDD34291AACA600E11907 /* SceneDelegate.swift in Sources */,
 				E46BDEDC291EF507002BC93D /* EmployeesTableViewHeader.swift in Sources */,
+				E4C56614292456F900AA3383 /* CompanyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
